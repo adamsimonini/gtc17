@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "customFont";
+  src: url(../assets/fonts/kidsFont.otf);
+}
+@font-face {
+  font-family: "customFontSimple";
+  src: url(../assets/fonts/kidsFontSimple.ttf);
+}
+
+.customFont {
+  font-family:"customFontSimple", Geneva, sans-serif;
+}
+
+.customFont{
+  font-family:"customFont", Geneva, sans-serif;
+}
+
+.header{
+  background-color:#0095C4;
+}
+
+.icon{
+  height: 27px;
+  top: 6px;
+  position: relative;
+}
+
+.title{
+  top: -5px;
+  position: relative;
+}
