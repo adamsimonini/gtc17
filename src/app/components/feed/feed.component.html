@@ -1,5 +1,5 @@
 <div>
-  <gtc-new-post></gtc-new-post>
+  <gtc-new-post (onAddPost)="addNewItem($event)"></gtc-new-post>
   <div *ngFor="let feedItem of feedList">
     <gtc-feed-item [data]="feedItem"></gtc-feed-item>
   </div>
