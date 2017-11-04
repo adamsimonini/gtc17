@@ -9,6 +9,7 @@ import { IFeedItem } from '../../models/feed';
 })
 export class FeedComponent implements OnInit {
   feedList: IFeedItem[] = [];
+  isNewPostVisible: boolean = false;
 
   constructor(private store: Store<any>) {
     this.store.select('feed').subscribe(data => {
@@ -16,10 +17,19 @@ export class FeedComponent implements OnInit {
     });
   }
 
+  hideNewPost() {
+    this.isNewPostVisible = false;
+  }
+
+  showNewPost() {
+    this.isNewPostVisible = true;
+  }
+
   ngOnInit() {
   }
 
   addNewItem(item: IFeedItem) {
+    this.isNewPostVisible = false;
     this.store.dispatch({
       type: 'ADD_FEED_ITEM',
       payload: item

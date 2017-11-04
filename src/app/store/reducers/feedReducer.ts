@@ -1,10 +1,35 @@
 import { IFeedItem, FeedItem } from '../../models/feed';
+import { IUser, User } from '../../models/user';
 
 const defaultState = [
-  new FeedItem('FeedItem1'),
-  new FeedItem('FeedItem2'),
-  new FeedItem('FeedItem3'),
-  new FeedItem('FeedItem4'),
+  new FeedItem(
+    new User('Bob'),
+    'I had a call today with a boy who was sad',
+    'How it went',
+    'What was the problem',
+    'Jan 12'
+  ),
+  new FeedItem(
+    new User('John'),
+    'I had a call today with a boy who was sad',
+    'How it went',
+    'What was the problem',
+    'Jan 12'
+  ),
+  new FeedItem(
+    new User('Steve'),
+    'I had a call today with a boy who was sad',
+    'How it went',
+    'What was the problem',
+    'Jan 12'
+  ),
+  new FeedItem(
+    new User('Micheal'),
+    'I had a call today with a boy who was sad',
+    'How it went',
+    'What was the problem',
+    'Jan 12'
+  ),
 ];
 
 export function feedReducer(state: IFeedItem[] = defaultState, action) {

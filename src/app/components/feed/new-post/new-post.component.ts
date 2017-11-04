@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FeedItem } from '../../../models/feed';
+import { User } from '../../../models/user';
 
 
 @Component({
@@ -7,17 +8,21 @@ import { FeedItem } from '../../../models/feed';
   templateUrl: './new-post.component.html',
   styleUrls: ['./new-post.component.scss']
 })
-export class NewPostComponent implements OnInit {
+export class NewPostComponent {
   @Output() onAddPost: EventEmitter<any> = new EventEmitter();
-  label: string;
+  whatHappened: string;
+  howItWent: string;
+  whatWasTheProblem: string;
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
   onAddPostClick() {
-    this.onAddPost.emit(new FeedItem(this.label));
+    this.onAddPost.emit(new FeedItem(
+      new User(),
+      this.whatHappened,
+      this.howItWent,
+      this.whatWasTheProblem
+    ));
   }
 
 }
