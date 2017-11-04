@@ -1,0 +1,30 @@
+<div class="w-75 dib mb2 pl1">
+  <div class="title f3">
+    {{statData.name}}
+  </div>
+  <div class="improve-bar" *ngIf="isImprovement">
+    <div [style.width]="baseWidth+'%'" class="section base">
+      <span class="data-point">{{statData.min}}</span>
+    </div>
+    <div [style.width]="changeWidth+'%'" class="section improve">
+    </div>
+    <div [style.width]="(100-changeWidth-baseWidth)+'%'" class="section remaining">
+      <span class="data-point-end" [style.left]="'calc(100% - ' + statData.max.toString().length*3 + 'px)'">{{statData.max}}</span>
+    </div>
+  </div>
+  <div class="not-improve-bar" *ngIf="!isImprovement">
+    <div [style.width]="(baseWidth+changeWidth)+'%'" class="section base">
+        <span class="data-point">{{statData.min}}</span>
+    </div>
+    <div [style.width]="-changeWidth+'%'" class="section deprove">
+
+    </div>
+    <div [style.width]="(100-baseWidth)+'%'" class="section remaining">
+      <span class="data-point-end" [style.left]="'calc(100% - ' + statData.max.toString().length*3 + 'px)'">{{statData.max}}</span>
+    </div>
+  </div>
+</div>
+<div class="dib">
+  <i [class]="'material-icons stat-icon ' + (isImprovement ? 'green' : 'red')">{{isImprovement ? 'thumb_up' : 'thumb_down'}}</i>
+  <span class="change"><strong>{{changeWidth}}%</strong></span>
+</div>
