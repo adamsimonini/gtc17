@@ -1,7 +1,6 @@
 import { Gender } from './gender';
 
 export interface IUser {
-  gender: Gender,
   name: {
     title: string,
     first: string,
@@ -13,7 +12,6 @@ export interface IUser {
 }
 
 export class User implements IUser {
-  gender: Gender;
   name: {
     title: string,
     first: string,
@@ -23,8 +21,7 @@ export class User implements IUser {
   icon: string;
   thumbnail: string;
 
-  constructor(gender = null, title = null, first = null, last = null, full = null, large = null, thumbnail = null) {
-    this.gender = gender;
+  constructor(first = null, last = null, full = null, title = null, large = null, thumbnail = null) {
     this.name = {
       title,
       first,

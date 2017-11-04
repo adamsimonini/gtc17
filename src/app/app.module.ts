@@ -34,6 +34,7 @@ import { StatService } from './services/stat.service';
 
 import { ChartsModule } from 'ng2-charts';
 import { FooterComponent } from './components/footer/footer.component';
+import { ModalComponent } from './components/common/modal/modal.component';
 
 
 export function logger(reducer: ActionReducer<any>): any {
@@ -58,7 +59,8 @@ const routes = [
     NewPostComponent,
     FeedItemComponent,
     StatComponent,
-    FooterComponent
+    FooterComponent,
+    ModalComponent
   ],
   imports: [
     ChartsModule,

@@ -10,11 +10,10 @@ export class UserTransformer {
 
     // Format new user
     return new User(
-      userData.gender,
-      userData.name.title,
       userData.name.first,
       userData.name.last,
       this.createFullName(userData.name.first, userData.name.last),
+      userData.name.title,
       userData.picture.large,
       userData.picture.thumbnail,
     );
