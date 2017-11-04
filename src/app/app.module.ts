@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { storeLogger } from 'ngrx-store-logger';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 
@@ -13,6 +14,7 @@ import { environment } from '../environments/environment';
 import { configReducer } from './store/reducers/configReducer';
 import { feedReducer } from './store/reducers/feedReducer';
 
+// Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { GraphComponent } from './components/graph/graph.component';
@@ -21,6 +23,9 @@ import { FeedComponent } from './components/feed/feed.component';
 import { NewPostComponent } from './components/feed/new-post/new-post.component';
 import { FeedItemComponent } from './components/feed/feed-item/feed-item.component';
 import { StatComponent } from './components/personal-stats/stat/stat.component';
+
+// Services
+import { StatService } from './services/stat.service';
 
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
@@ -50,6 +55,7 @@ const routes = [
     FormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot({
       config: configReducer,
@@ -59,7 +65,7 @@ const routes = [
       maxAge: 5
     }),
   ],
-  providers: [],
+  providers: [StatService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

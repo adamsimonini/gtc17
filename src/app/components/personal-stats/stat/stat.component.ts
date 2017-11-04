@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { StatData } from '../../../models/stat-data';
+import { StatChange } from '../../../models/stat-change';
 
 @Component({
   selector: 'gtc-stat',
@@ -7,7 +7,7 @@ import { StatData } from '../../../models/stat-data';
   styleUrls: ['./stat.component.scss']
 })
 export class StatComponent implements OnInit {
-  @Input() statData: StatData = new StatData("Test", 0, 100, 50, 60);
+  @Input() statData: StatChange = new StatChange("Test", 25, 50);
   baseWidth: number;
   changeWidth: number;
   isImprovement: boolean;
@@ -15,11 +15,9 @@ export class StatComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.baseWidth = Math.floor(this.statData.getBeforePercent());
-    this.changeWidth = Math.floor(this.statData.getChange());
+    this.baseWidth = Math.floor(this.statData.beforePercent);
+    this.changeWidth = Math.floor(this.statData.afterPercent - this.statData.beforePercent);
     this.isImprovement = this.changeWidth >= 0;
-    console.log(this.baseWidth);
-    console.log(this.changeWidth);
   }
 
 }
