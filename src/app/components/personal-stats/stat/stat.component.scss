@@ -1,4 +1,4 @@
-.improve-bar {
+.improve-bar, .not-improve-bar {
     height: 3vh;
     width: calc(100% - 25px);
     display: flex;
@@ -47,7 +47,6 @@
     position: relative;
     top: .5rem;
     left: 5%;
-    color: green;
 }
 
 .change {

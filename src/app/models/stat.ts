@@ -5,4 +5,5 @@ export class Stat {
     @autoserialize percent: number;
     @autoserializeAs('stat_group') statGroup: string;
     @autoserialize user: string;
+    @autoserialize max: number;
 }

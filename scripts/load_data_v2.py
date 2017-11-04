@@ -41,4 +41,6 @@ if __name__ == '__main__':
                 'stat_group': stat_groups[j],
                 'percent': percent*100
             }
+            if (j == len(all_stats)-3):
+                data['max'] = float(all_stats[j][i])
             db.collection(u'stats').document().set(data)
