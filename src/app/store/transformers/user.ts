@@ -16,7 +16,6 @@ export class UserTransformer {
       userData.name.last,
       this.createFullName(userData.name.first, userData.name.last),
       userData.picture.large,
-      userData.picture.medium,
       userData.picture.thumbnail,
     );
   }
