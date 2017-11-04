@@ -10,8 +10,11 @@
       <input class="flex-auto" [(ngModel)]="howItWent" type="text">
     </div>
     <div class="flex">
-      <div class="w-40">What was the problem?</div>
-      <input class="flex-auto" [(ngModel)]="whatWasTheProblem" type="text">
+      <div class="w-40">Problem Category<div>
+        <select [(ngModel)]="whatWasTheProblem">
+          <option *ngFor="let c of categories" [value]="c.category">{{c.category}}</option>
+        </select>
+      <!-- <input class="flex-auto" [(ngModel)]="whatWasTheProblem" type="text"> -->
     </div>
     <div class="flex pt2">
       <button class="w-100 bn f6 link dim br1 ph3 pv2 dib white outline-0 bg-blue hover-bg-light-blue hover-blue" (click)="onAddPostClick()">Submit</button>

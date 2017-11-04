@@ -1,10 +1,14 @@
 <div class="w-100 flex footer">
-  <div class="w-50 flex items-center justify-center">
-    <i class="material-icons footerIcon">mood</i>
-    <p class="pl2">Children Helped: 6</p>
+  <div class="flex-auto flex items-center justify-center">
+    <i class="material-icons white">mood</i>
+    <p class="pl2">Children Helped:</p><p class="pl1">{{helped}}</p>
   </div>
-  <div class="w-50 flex items-center justify-center">
-    <i class="material-icons footerIcon">favorite</i>
-    <p class="pl2">Lives Positively Affected: ~24</p>
+  <div class="flex-auto flex items-center justify-center">
+    <i [ngClass]="isUpdate ? 'f3 red': 'f5 white'" class="material-icons footerIcon">favorite</i>
+    <p class="pl2">Lives Positively Affected:</p><p class="pl1">{{othersHelped}}</p>
+  </div>
+  <div class="flex-auto flex items-center justify-center">
+    <i class="material-icons white">schedule</i>
+    <p class="pl2">Hours Being a Hero: </p><p class="pl1">{{totalHours}}</p>
   </div>
 </div>
