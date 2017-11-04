@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { StoreModule, Store, ActionReducer } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { RouterModule } from '@angular/router';
@@ -7,11 +8,15 @@ import { storeLogger } from 'ngrx-store-logger';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
 import { FormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
 import { environment } from '../environments/environment';
+
+import { UserEffects } from './store/effects/user';
 
 // Reducers
 import { configReducer } from './store/reducers/configReducer';
 import { feedReducer } from './store/reducers/feedReducer';
+import { userReducer } from './store/reducers/userReducer';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -49,13 +54,18 @@ const routes = [
     ChartsModule,
     BrowserModule,
     FormsModule,
+    HttpModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(routes),
     StoreModule.forRoot({
       config: configReducer,
-      feed: feedReducer
+      feed: feedReducer,
+      user: userReducer,
     }, { metaReducers }),
+    EffectsModule.forRoot([
+      UserEffects
+    ]),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     }),
@@ -65,6 +75,7 @@ const routes = [
 })
 export class AppModule {
   constructor(private store: Store<any>) {
+    // Starts App
     this.store.dispatch({
       type: 'APP_START'
     });

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { IUser } from './models/user';
 
 @Component({
   selector: 'gtc-root',
@@ -6,9 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  user: IUser = null;
 
-  constructor() {
+  constructor(private store: Store<any>) {
+    this.store.select('user').subscribe(data => {
+      this.user = data;
+    });
     this.registerServiceWorker();
   }
 

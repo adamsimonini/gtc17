@@ -1,5 +1,3 @@
-
-
 export interface IFeedItem {
   label: string;
 }
