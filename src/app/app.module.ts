@@ -27,6 +27,9 @@ import { StatComponent } from './components/personal-stats/stat/stat.component';
 // Services
 import { StatService } from './services/stat.service';
 
+import { ChartsModule } from 'ng2-charts';
+
+
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
 }
@@ -51,6 +54,7 @@ const routes = [
     StatComponent
   ],
   imports: [
+    ChartsModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
