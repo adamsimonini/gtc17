@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FeedItem } from '../../../models/feed';
-import { User } from '../../../models/user';
-
+import { IUser, User } from '../../../models/user';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'gtc-new-post',
@@ -10,15 +10,20 @@ import { User } from '../../../models/user';
 })
 export class NewPostComponent {
   @Output() onAddPost: EventEmitter<any> = new EventEmitter();
+  user: IUser;
   whatHappened: string;
   howItWent: string;
   whatWasTheProblem: string;
 
-  constructor() { }
+  constructor(private store: Store<any>) {
+    this.store.select('user').subscribe(data => {
+      this.user = data;
+    });
+  }
 
   onAddPostClick() {
     this.onAddPost.emit(new FeedItem(
-      new User(),
+      this.user,
       this.whatHappened,
       this.howItWent,
       this.whatWasTheProblem

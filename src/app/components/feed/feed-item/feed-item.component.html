@@ -1,7 +1,26 @@
-<div class="flex flex-column pa2 bg-white shadow-2 br2 mv2 customFont">
-  <div>{{data.user.name.first}}</div>
-  <div>{{data.whatHappened}}</div>
-  <div>{{data.howItWent}}</div>
-  <div>{{data.whatWasTheProblem}}</div>
-  <div>{{data.date}}</div>
+<div class="flex flex-column bg-white shadow-3 br2 mv2 customFont">
+  <div class="flex items-center justify-between pv1 bb b--light-gray" *ngIf="data.user.username !== null">
+    <div class="flex items-center">
+      <div class="user-icon br-pill mh2 ba b--white" [ngStyle]="{'background-image': 'url(' + data.user.thumbnail + ')'}"></div>
+      <div class="flex flex-column">
+        <div class="ttc">{{data.user.name.first}} {{data.user.name.last}}</div>
+        <div class="f7 ttc gray">{{data.user.location.city}}, {{data.user.location.province}}</div>
+      </div>
+    </div>
+    <div class="flex f6 pr2">{{data.date}}</div>
+  </div>
+  <div class="flex flex-column pa2">
+    <div class="flex">
+      <div class="w-40">What Happened</div>
+      <div>{{data.whatHappened}}</div>
+    </div>
+    <div class="flex">
+      <div class="w-40">How it went</div>
+      <div>{{data.howItWent}}</div>
+    </div>
+    <div class="flex">
+      <div class="w-40">What was the problem</div>
+      <div>{{data.whatWasTheProblem}}</div>
+    </div>
+  </div>
 </div>

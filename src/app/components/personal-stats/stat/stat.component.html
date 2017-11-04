@@ -1,5 +1,5 @@
 <div class="w-75 dib mb2 pl1">
-  <div class="title f3">
+  <div class="title f4">
     {{statData.name}}
   </div>
   <div class="improve-bar" *ngIf="isImprovement">
@@ -14,7 +14,7 @@
   </div>
   <div class="not-improve-bar" *ngIf="!isImprovement">
     <div [style.width]="(baseWidth+changeWidth)+'%'" class="section base">
-        <span class="data-point">{{statData.min}}</span>
+      <span class="data-point">{{statData.min}}</span>
     </div>
     <div [style.width]="-changeWidth+'%'" class="section deprove">
 
@@ -26,5 +26,7 @@
 </div>
 <div class="dib">
   <i [class]="'material-icons stat-icon ' + (isImprovement ? 'green' : 'red')">{{isImprovement ? 'thumb_up' : 'thumb_down'}}</i>
-  <span class="change"><strong>{{changeWidth}}%</strong></span>
+  <span class="change">
+    <strong>{{changeWidth}}%</strong>
+  </span>
 </div>

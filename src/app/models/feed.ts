@@ -23,5 +23,6 @@ export class FeedItem implements IFeedItem {
     this.howItWent = howItWent;
     this.whatWasTheProblem = whatWasTheProblem;
     this.whatHappened = whatHappened;
+    this.date = date;
   }
 }
