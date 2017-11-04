@@ -37,6 +37,12 @@ export class FeedTransformer {
   static transform(userList: User[]) {
     return feedCollection.map((item, index) => {
       item.user = userList[index];
+      item.likes = [
+        userList[index]
+      ];
+      item.comments = [
+        userList[index]
+      ];
       return item;
     });
   }

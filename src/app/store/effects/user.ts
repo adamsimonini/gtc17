@@ -31,7 +31,7 @@ export class UserEffects {
 
   @Effect() getUserBunch$: Observable<Action> = this.actions$.ofType('APP_START')
     .mergeMap((action: PayloadAction) =>
-      this.http.get('https://randomuser.me/api/?nat=ca&results=10')
+      this.http.get('https://randomuser.me/api/?nat=ca&results=40')
         // If successful, dispatch success action with result
         .map(data => {
           return {
