@@ -1,15 +1,23 @@
 <div class="flex flex-column customFont">
-  <div class="flex items-center header white pa2 f4">
-    <i class="material-icons pa2">menu</i>
-    <div class="pl2 title">Kid Help Phone: Counsellor Analytics
-      <img class="icon" src="../assets/icons/kidsHelpPhone.png" alt="icon">
+  <div class="flex items-center justify-between header white pa2 f4 shadow-3">
+    <div class="flex items-center">
+      <i class="material-icons pa2 pointer">menu</i>
+      <div class="pl2 title flex items-center">
+        <div class="pb1">Kid Help Phone: Counsellor Analytics</div>
+        <img class="icon pl2" src="../assets/icons/kidsHelpPhone.png" alt="icon">
+      </div>
     </div>
     <div class="flex items-center ttc ph4" *ngIf="user !== null">
-      <div class="icon br-pill mr3 ba b--white" [ngStyle]="{'background-image': 'url(' + user.thumbnail + ')'}"></div>
+      <div class="user-icon br-pill mr3 ba b--white" [ngStyle]="{'background-image': 'url(' + user.thumbnail + ')'}"></div>
       <div>{{user.name.first}} {{user.name.last}}</div>
     </div>
   </div>
-  <div class="pa2">
+  <div class="pa2 mt2">
     <router-outlet></router-outlet>
+  </div>
+  <div class="flex bottom tc footer">
+    <div class="w-100">
+      <gtc-footer></gtc-footer>
+    </div>
   </div>
 </div>

@@ -16,24 +16,26 @@
   font-family:"customFont", Geneva, sans-serif;
 }
 
-.header{
+.header, .footer{
   background-color:#0095C4;
 }
 
 .icon{
   height: 27px;
-  top: 6px;
-  position: relative;
 }
 
-.title{
-  top: -5px;
-  position: relative;
-}
-
-.icon{
+.user-icon{
   background-repeat: no-repeat;
   background-size: cover;
   width: 40px;
   height: 40px;
+}
+
+.bottom{
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
 }
