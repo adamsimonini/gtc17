@@ -18,6 +18,7 @@ import { PersonalStatsComponent } from './components/personal-stats/personal-sta
 import { FeedComponent } from './components/feed/feed.component';
 import { NewPostComponent } from './components/feed/new-post/new-post.component';
 import { FeedItemComponent } from './components/feed/feed-item/feed-item.component';
+import { StatComponent } from './components/personal-stats/stat/stat.component';
 
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
@@ -28,6 +29,7 @@ export const metaReducers = !environment.production ? [logger] : [];
 const routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'stats', component: StatComponent }
 ];
 
 @NgModule({
@@ -38,7 +40,8 @@ const routes = [
     PersonalStatsComponent,
     FeedComponent,
     NewPostComponent,
-    FeedItemComponent
+    FeedItemComponent,
+    StatComponent
   ],
   imports: [
     BrowserModule,

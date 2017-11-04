@@ -1,0 +1,44 @@
+.improve-bar {
+    height: 3vh;
+    width: calc(100% - 25px);
+    display: flex;
+    border: 2px solid darkgray;
+    margin-left: 25px;
+}
+
+.section {
+    display: inline-block;
+    height: 100%;
+}
+
+.improve {
+    background-color: green;
+}
+
+.base {
+    background-color: blue;
+}
+
+.remaining {
+    background-color: white;
+}
+
+.deprove {
+    background-color: red;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.data-point {
+    position: relative;
+    top: 25px;
+    left: -5px;
+}
+
+.data-point-end {
+    position: relative;
+    top: 25px;
+    left: calc(100% - 30px);
+}
