@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
+## Getting started
+
+1. Clone the repo
+2. Navigate to root directory in your favourite terminal
+3. Run `yarn install` (or `npm install` I guess, but that doesn't have lockfiles)
+4. Umm... Past that do what you want I guess, just don't screw too much up. :D
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -14,14 +21,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## Deploying on Firebase
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+From the root directory, run `npm run firebase-deploy`. This will build the project, generate a service worker, and then deploy it to firebase.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The link to the site is: [https://gift-the-code.firebaseapp.com/](https://gift-the-code.firebaseapp.com/)
