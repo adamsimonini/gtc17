@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "customFont";
+  src: url(../../../assets/fonts/kidsFont.otf);
+}
+
+.outer {
+  padding-bottom:20px;
+  padding-left:30px;
+  padding-right:30px;
+  font-family:"customFont", Geneva, sans-serif;
+}
+
+.graph-div{
+  padding-bottom:10px;
+}
+
+.border-div{
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding-left:100px;
+}

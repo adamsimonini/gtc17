@@ -12,7 +12,7 @@ export class GraphComponent implements OnInit {
   ngOnInit() {
   }
 // Doughnut
-public doughnutChartLabels:string[] = ['Family', 'School', 'Friends'];
+public doughnutChartLabels:string[] = ['<3', '4-6', '>7'];
 public doughnutChartData:number[] = [350, 450, 100];
 public doughnutChartType:string = 'doughnut';
 
