@@ -1,2 +1,9 @@
-<gtc-stat></gtc-stat>
-<gtc-stat *ngFor="let stat of statChanges" [statData]="stat"></gtc-stat>
+<div class="flex pl2">
+<header class="tc ph4" class="pa1">
+    <h2 class="f4 f3-m f2-l fw2 black-90 mv3">Your Recent Quality Review Scores</h2>
+    <!-- <h2 class="f5 f4-m f3-l fw2 black-50 mt0 lh-copy"> subtitle stuff</h2> -->
+</header>
+</div>
+<div class="pl3">
+    <gtc-stat *ngFor="let stat of statChanges" [statData]="stat"></gtc-stat>
+</div>
