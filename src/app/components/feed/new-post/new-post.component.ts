@@ -14,6 +14,16 @@ export class NewPostComponent {
   whatHappened: string;
   howItWent: string;
   whatWasTheProblem: string;
+  categories = [
+     {value: 1, category: "Emotional Health"},
+     {value: 2, category: "Dating"},
+     {value: 3, category: "LGBTQ"},
+     {value: 4, category: "Sexting"},
+     {value: 5, category: "Bullying"},
+     {value: 6, category: "Assult"},
+     {value: 7, category: "Family Troubles"},
+     {value: 8, category: "Other"}
+   ];
 
   constructor(private store: Store<any>) {
     this.store.select('user').subscribe(data => {
@@ -29,5 +39,4 @@ export class NewPostComponent {
       this.whatWasTheProblem
     ));
   }
-
 }

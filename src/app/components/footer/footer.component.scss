@@ -3,6 +3,8 @@ p{
   color: #fff;
 }
 .footerIcon{
-  pading-top: 1% !important;
-  color: #fff;
+  -webkit-transition: color 0.5s, font-size 0.5s;
+  -moz-transition: color 0.5s, font-size 0.5s;
+  -o-transition: color 0.5s, font-size 0.5s;
+    transition: color 0.5s, font-size 0.5s;
 }
