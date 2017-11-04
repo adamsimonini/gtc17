@@ -20,6 +20,9 @@ import { FeedComponent } from './components/feed/feed.component';
 import { NewPostComponent } from './components/feed/new-post/new-post.component';
 import { FeedItemComponent } from './components/feed/feed-item/feed-item.component';
 
+import { ChartsModule } from 'ng2-charts';
+
+
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
 }
@@ -41,6 +44,7 @@ const routes = [
     FeedItemComponent
   ],
   imports: [
+    ChartsModule,
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
