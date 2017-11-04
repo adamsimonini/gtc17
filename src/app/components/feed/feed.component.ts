@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { IFeedItem } from '../../models/feed';
 
 @Component({
   selector: 'gtc-feed',
@@ -6,15 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
-  feedList: any[] = [
-    {
-      label: 'Feed Item 1'
-    }
-  ];
+  feedList: IFeedItem[] = [];
 
-  constructor() { }
+  constructor(private store: Store<any>) {
+    this.store.select('feed').subscribe(data => {
+      this.feedList = data;
+    });
+  }
 
   ngOnInit() {
   }
+
+  addNewItem(item: IFeedItem) {
+    this.store.dispatch({
+      type: 'ADD_FEED_ITEM',
+      payload: item
+    });
+  }
+
 
 }

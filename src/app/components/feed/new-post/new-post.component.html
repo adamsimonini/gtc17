@@ -1,12 +1,12 @@
-<div class="pa2 ba b--black">
-  <p>New Post</p>
+<div class="flex flex-column pa2 ba b--black">
+  <div class="pv2 b">New Post</div>
   <div class="flex flex-column">
     <div class="flex">
       <div class="w-40">Input</div>
-      <input class="flex-auto" type="text">
+      <input class="flex-auto" [(ngModel)]="label" type="text">
     </div>
     <div class="flex pt2">
-      <button class="w-100 f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black">Submit</button>
+      <button class="w-100 f6 link dim br1 ph3 pv2 mb2 dib white bg-near-black" (click)="onAddPostClick()">Submit</button>
     </div>
   </div>
 </div>

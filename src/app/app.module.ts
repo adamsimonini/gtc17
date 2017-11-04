@@ -6,10 +6,12 @@ import { RouterModule } from '@angular/router';
 import { storeLogger } from 'ngrx-store-logger';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
+import { FormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 
 // Reducers
 import { configReducer } from './store/reducers/configReducer';
+import { feedReducer } from './store/reducers/feedReducer';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -40,11 +42,13 @@ const routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot(routes),
     StoreModule.forRoot({
-      config: configReducer
+      config: configReducer,
+      feed: feedReducer
     }, { metaReducers }),
     StoreDevtoolsModule.instrument({
       maxAge: 5
