@@ -15,7 +15,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 
 export function logger(reducer: ActionReducer<any>): any {
-  // default, no options
   return storeLogger()(reducer);
 }
 
