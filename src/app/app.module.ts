@@ -21,6 +21,7 @@ import { NewPostComponent } from './components/feed/new-post/new-post.component'
 import { FeedItemComponent } from './components/feed/feed-item/feed-item.component';
 
 import { ChartsModule } from 'ng2-charts';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 export function logger(reducer: ActionReducer<any>): any {
@@ -41,7 +42,8 @@ const routes = [
     GraphComponent,
     FeedComponent,
     NewPostComponent,
-    FeedItemComponent
+    FeedItemComponent,
+    FooterComponent
   ],
   imports: [
     ChartsModule,
