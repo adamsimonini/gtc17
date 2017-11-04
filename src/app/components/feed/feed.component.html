@@ -1,0 +1,6 @@
+<div>
+  <gtc-new-post></gtc-new-post>
+  <div *ngFor="let feedItem of feedList">
+    <gtc-feed-item [data]="feedItem"></gtc-feed-item>
+  </div>
+</div>
