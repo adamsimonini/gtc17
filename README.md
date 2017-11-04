@@ -26,3 +26,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 From the root directory, run `npm run firebase-deploy`. This will build the project, generate a service worker, and then deploy it to firebase.
 
 The link to the site is: [https://gift-the-code.firebaseapp.com/](https://gift-the-code.firebaseapp.com/)
+
+## Scripts
+Follow these steps to be able to run scripts. Virtualenv is recommended. Pip is mandatory
+1. In your favourite Command terminal, navigate to the scripts directory.
+2. Run the following commands
+    1. `virtualenv env`
+    2. `source env/scripts/activate`
+    3. `pip install -r requirements.txt`
+3. You are all set up to run scripts
