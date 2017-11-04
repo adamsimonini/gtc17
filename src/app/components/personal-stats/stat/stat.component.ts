@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { StatData } from './stat-data';
+import { StatData } from '../../../models/stat-data';
 
 @Component({
   selector: 'gtc-stat',
