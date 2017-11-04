@@ -13,6 +13,7 @@ import { configReducer } from './store/reducers/configReducer';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
+import { GraphComponent } from './components/graph/graph.component';
 
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
@@ -28,7 +29,8 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,
