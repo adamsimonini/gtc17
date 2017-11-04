@@ -1,2 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: "customFont";
+  src: url(assets/fonts/kidsFont.otf);
+}
+@font-face {
+  font-family: "customFontSimple";
+  src: url(assets/fonts/kidsFontSimple.ttf);
+}
+
+.customFont {
+  font-family:"customFontSimple", Geneva, sans-serif;
+}
+
+.customFont{
+  font-family:"customFont", Geneva, sans-serif;
+}
