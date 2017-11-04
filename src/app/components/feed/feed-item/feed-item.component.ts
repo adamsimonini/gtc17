@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IFeedItem } from '../../../models/feed';
 
 @Component({
   selector: 'gtc-feed-item',
@@ -6,9 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./feed-item.component.scss']
 })
 export class FeedItemComponent implements OnInit {
-  @Input() data: any;
+  @Input() data: IFeedItem;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
