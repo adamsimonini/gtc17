@@ -7,23 +7,17 @@
         <div class="f7 ttc gray">{{data.user.location.city}}, {{data.user.location.province}}</div>
       </div>
     </div>
+    <div class="topic">{{data.whatWasTheProblem}}
+    <i class="material-icons f6 icon">mood</i>
+    </div>
   </div>
   <div class="flex flex-column pa2">
-    <div class="flex">
-      <div class="w-40">What Happened</div>
+    <div class="flex post">
       <div>{{data.whatHappened}}</div>
-    </div>
-    <div class="flex">
-      <div class="w-40">How it went</div>
-      <div>{{data.howItWent}}</div>
-    </div>
-    <div class="flex">
-      <div class="w-40">What was the problem</div>
-      <div>{{data.whatWasTheProblem}}</div>
     </div>
   </div>
   <div class="flex justify-between bt b--light-gray">
-    <div class="flex f6 pa2 gray">{{data.date}}</div>
+    <div class="flex f6 pa2 gray date">{{data.date}}</div>
     <div class="flex">
       <div class="flex items-center ph2 gray f6 bl br b--light-gray pointer">
         <i class="material-icons f6">thumb_up</i>
