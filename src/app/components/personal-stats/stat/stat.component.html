@@ -1,26 +1,26 @@
-<div class="w-75 dib mb2 pl1">
-  <div class="title f4">
+<div class="w-75 dib mb4 pl1">
+  <div class="title f5">
     {{statData.name}}
   </div>
-  <div class="improve-bar" *ngIf="isImprovement">
+  <div class="improve-bar br-pill overflow-hidden" *ngIf="isImprovement">
     <div [style.width]="baseWidth+'%'" class="section base">
-      <span class="data-point">{{statData.min}}</span>
+      <span class="data-point label">{{statData.min}}</span>
     </div>
     <div [style.width]="changeWidth+'%'" class="section improve">
     </div>
     <div [style.width]="(100-changeWidth-baseWidth)+'%'" class="section remaining">
-      <span class="data-point-end" [style.left]="'calc(100% - ' + statData.max.toString().length*3 + 'px)'">{{statData.max}}</span>
+      <span class="data-point-end label" [style.left]="'calc(100% - ' + statData.max.toString().length*3 + 'px)'">{{statData.max}}</span>
     </div>
   </div>
-  <div class="not-improve-bar" *ngIf="!isImprovement">
+  <div class="not-improve-bar br-pill overflow-hidden" *ngIf="!isImprovement">
     <div [style.width]="(baseWidth+changeWidth)+'%'" class="section base">
-      <span class="data-point">{{statData.min}}</span>
+        <span class="data-point label">{{statData.min}}</span>
     </div>
     <div [style.width]="-changeWidth+'%'" class="section deprove">
 
     </div>
     <div [style.width]="(100-baseWidth)+'%'" class="section remaining">
-      <span class="data-point-end" [style.left]="'calc(100% - ' + statData.max.toString().length*3 + 'px)'">{{statData.max}}</span>
+      <span class="data-point-end label" [style.left]="'calc(100% - ' + statData.max.toString().length*3 + 'px)'">{{statData.max}}</span>
     </div>
   </div>
 </div>
