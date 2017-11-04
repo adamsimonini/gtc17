@@ -15,6 +15,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { GraphComponent } from './components/graph/graph.component';
 
+import { ChartsModule } from 'ng2-charts';
+
+
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
 }
@@ -33,6 +36,7 @@ const routes = [
     GraphComponent
   ],
   imports: [
+    ChartsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
