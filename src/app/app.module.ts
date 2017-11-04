@@ -15,6 +15,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { GraphComponent } from './components/graph/graph.component';
 import { PersonalStatsComponent } from './components/personal-stats/personal-stats.component';
+import { FeedComponent } from './components/feed/feed.component';
+import { NewPostComponent } from './components/feed/new-post/new-post.component';
+import { FeedItemComponent } from './components/feed/feed-item/feed-item.component';
 
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
@@ -32,7 +35,10 @@ const routes = [
     AppComponent,
     HomeComponent,
     GraphComponent,
-    PersonalStatsComponent
+    PersonalStatsComponent,
+    FeedComponent,
+    NewPostComponent,
+    FeedItemComponent
   ],
   imports: [
     BrowserModule,
