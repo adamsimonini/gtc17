@@ -14,6 +14,7 @@ import { configReducer } from './store/reducers/configReducer';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { GraphComponent } from './components/graph/graph.component';
+import { PersonalStatsComponent } from './components/personal-stats/personal-stats.component';
 
 export function logger(reducer: ActionReducer<any>): any {
   return storeLogger()(reducer);
@@ -30,7 +31,8 @@ const routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    GraphComponent
+    GraphComponent,
+    PersonalStatsComponent
   ],
   imports: [
     BrowserModule,
