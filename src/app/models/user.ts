@@ -8,7 +8,7 @@ export interface IUser {
     last: string,
     full: string
   },
-  icons: string,
+  icon: string,
   thumbnail: string
 }
 
